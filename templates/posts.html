@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="row">
+        {% for post in posts %}
+        <div class="col s12 m4">
+            <div class="card z-depth-3">
+                <div class="card-image">
+                    <img src="{{post.image_url}}" class="responsive-img" style="height:200px;" alt="">
+                    <span class="card-title" style="font-weight:bold">{{post.title}}</span>
+                </div>
+                <div class="card-content">
+                    <p>Posted by <b>{{post.author}}</b></p><br> 
+                    <a href="/post/{{post.id}}" class="waves-effect waves-light btn-small ">Read Post</a>                
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

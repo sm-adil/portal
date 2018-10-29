@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="card-panel z-depth-3">
+        <h4>Welcome {{ session.username }}</h4>
+        <a href="/add_post" class="waves-effect waves-light btn-small">ADD Post</a>
+        <hr>
+        <table class="table highlight ">
+            <tr>
+                <thead>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Date</th>
+                    <th></th>
+                    <th></th>
+                </thead>
+            </tr>
+            <tbody>
+            {% for post in posts %}
+            <tr>
+                <td>{{post.id}}</td>
+                <td>{{post.title}}</td>
+                <td>{{post.author}}</td>
+                <td>{{post.create_date}}</td>
+                <td><a href="update_post/{{post.id}}" class="waves-effect waves-light btn-small right">Update</a></td>
+                <td>
+                <form action="{{url_for('delete_post', id=post.id)}}" method="post">
+                    <button type="submit" class="red waves-effect waves-light btn-small right">Delete</button>
+                </form>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

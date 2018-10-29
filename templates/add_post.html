@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <h4>New Post</h4><br>
+    {% from "includes/_formhelpers.html" import render_field %}
+    <form action="" class="card-panel" method="post">
+        <div class="input-field">
+            {{ render_field(form.title) }}
+        </div>
+        <div class="input-field">
+            {{ render_field(form.image_url) }}
+        </div>
+        <div class="input-field">
+            {{ render_field(form.body, id="editor") }}
+        </div>
+        <button type="submit" class="waves-effect waves-light btn-large" name="submit">Add Post</button>
+    </form>
+{% endblock %}

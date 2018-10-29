@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="card z-depth-3">
+        <div class="card-image">
+            <img src="{{post.image_url}}" class="responsive-img" alt="">
+        </div>
+        <div class="card-content">
+            <h3>{{post.title}}</h3>
+            <small>Posted by {{post.author}} on {{post.create_date}}</small>
+            <hr>
+            <div>
+                {{post.body | safe}}
+            </div>
+        </div>
+    </div>
+{% endblock %}

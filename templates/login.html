@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <form action="" class="card z-depth-3" method="post">
+        <div class="card-content">
+            <h4>LOG IN</h4><br>
+            <div class="input-field">
+                <input type="text" name="username" value={{request.form.username}}>
+                <label for="username" class="active">Username</label>
+            </div>
+            <div class="input-field">
+                <input type="password" name="password" class="form-control" value={{request.form.password}}>
+                <label for="password" class="active">Password</label>
+            </div>
+            <button type="submit" class="waves-effect waves-light btn-large" name="submit">LOG IN</button>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    {% from "includes/_formhelpers.html" import render_field %}
+    <form action="" method="POST" class="card-panel z-depth-3">
+        <h4>REGISTER</h4><br>
+        <div class="input-feild">
+            {{render_field(form.username)}}
+        </div>
+        <div class="input-feild">
+            {{render_field(form.email)}}
+        </div>
+        <div class="input-feild">
+            {{render_field(form.password)}}
+        </div>
+        <div class="input-feild">
+            {{render_field(form.confirm)}}
+        </div>
+        <button type="submit" class="waves-effect waves-light btn-large" name="submit">SIGN UP</button>
+    </form>
+{% endblock %}
