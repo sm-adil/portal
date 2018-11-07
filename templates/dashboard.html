@@ -5,17 +5,17 @@
         <h4>Welcome {{ session.username }}</h4>
         <a href="/add_post" class="waves-effect waves-light btn-small">ADD Post</a>
         <hr>
-        <table class="table highlight ">
-            <tr>
-                <thead>
+        <table class="table highlight">
+            <thead>
+                <tr>
                     <th>ID</th>
                     <th>Title</th>
                     <th>Author</th>
                     <th>Date</th>
                     <th></th>
                     <th></th>
-                </thead>
-            </tr>
+                </tr>
+            </thead>
             <tbody>
             {% for post in posts %}
             <tr>

@@ -51,7 +51,7 @@ def posts():
 
 #Single Post
 @app.route('/post/<string:id>')
-def article(id):
+def post(id):
     # Create cursor
     cur = mysql.connection.cursor()
 

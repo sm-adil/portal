@@ -1,9 +1,9 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-    <h4>New Post</h4><br>
     {% from "includes/_formhelpers.html" import render_field %}
     <form action="" class="card-panel" method="post">
+        <h4>New Post</h4><br>
         <div class="input-field">
             {{ render_field(form.title) }}
         </div>
