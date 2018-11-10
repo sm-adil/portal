@@ -27,6 +27,18 @@ Install the necessary packages by running the following command.
 pip install -r requirements.txt
 ```
 
+### Create Database
+Create the database of the app by running the following command in your mysql terminal.
+```
+CREATE DATABASE IF NOT EXISTS ccDB;
+```
+
+### Import Database Tables
+Import the required database tables for the project by running the following command in your local terminal..
+```
+mysql -u root -p root < ccDB.sql;
+```
+
 ### Run the app
 Test the app by running the following command.
 ```
